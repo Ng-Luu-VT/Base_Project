@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_rectangle_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_rectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/hello"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/login"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHello"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="47dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="LOGIN"
+                android:textColor="@color/colorBlueLight"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Let's learn IELTS"
+                android:textColor="@color/colorBlueLight"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/BaseButton.ButtonWrap.BlueRadius16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="center"
+                android:text="@string/login_with_facebook" />
+
+            <TextView
+                style="@style/BaseButton.ButtonWrap.RedRadius16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:gravity="center"
+                android:text="@string/login_with_google" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/or"
+                android:textColor="@color/colorBlueLight" />
+
+            <com.teachenglish.techenglish.view.EditTextCustom
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintTop_toBottomOf="@id/btnClick"
+                app:placeholder="sample@gmail.com"
+                app:titleHeader="Email or username" />
+
+            <com.teachenglish.techenglish.view.EditTextCustom
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintTop_toBottomOf="@id/btnClick"
+                app:placeholder="*******************"
+                app:titleHeader="Password" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                style="@style/BaseButton.ButtonWrap.BlueRadius10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                android:gravity="center"
+                android:text="LOGIN" />
+
+            <LinearLayout
+                android:id="@+id/tvTitleNewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:text="@string/new_user_let"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:padding="10dp"
+                    android:text="@string/sign_up_lower_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frmContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

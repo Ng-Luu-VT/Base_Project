@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/frmStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/shape_grandient"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/tlMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frmStatusBar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlMain"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#953E3E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#F60606"
+            app:tabTextAppearance="@style/TabTextAppeareance">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_baseline_home_24"
+                android:text="Tab 1" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_baseline_home_24"
+                android:text="Tab 2" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_baseline_home_24"
+                android:text="Tab 3" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_baseline_home_24"
+                android:text="Tab 3" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:icon="@drawable/ic_baseline_home_24"
+                android:text="Tab 3" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frmContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

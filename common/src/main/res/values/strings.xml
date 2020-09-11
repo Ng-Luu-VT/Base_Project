@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BB</string>
+    <string name="notification">Notification</string>
+    <string name="close">Close</string>
+    <string name="no_data">No data</string>
+    <color name="activeColor">#33b3f7</color>
+    <dimen name="_24dp">24dp</dimen>
+</resources>

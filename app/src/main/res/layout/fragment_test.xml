@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_rectangle_test_action"
+            android:scaleType="fitXY"/>
+
+        <com.teachenglish.techenglish.view.GEToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Document 1 - Test 1" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            app:srcCompat="@drawable/img_book"
+            app:layout_constraintDimensionRatio="2:3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+        <TextView
+            android:textSize="22sp"
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Test 1"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            />
+        <TextView
+            android:layout_marginStart="8dp"
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <ScrollView
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctlCheckNow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_background_corner_yellow_light_border_blue_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.7">
+
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/tvCheckNowTitle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CHECK YOUR ANSWER"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvCheckNowContent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCheckNowTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Try the test to check your answers and get your corresponding band score."/>
+
+                    <TextView
+                        android:id="@+id/tvCheckNow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/BaseButton.ButtonWrap.BlueRadius5"
+                        android:text="@string/check_now"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCheckNowContent"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctlViewNow"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple_background_corner_yellow_light_border_blue_10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctlCheckNow"
+                    app:layout_constraintWidth_percent="0.7">
+
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/tvViewNowTitle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_keys_explanation"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvViewNowContent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvViewNowTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="View keys and detailed explanation of questions in this test."/>
+
+                    <TextView
+                        android:id="@+id/tvViewNow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        style="@style/BaseButton.ButtonWrap.BlueRadius5"
+                        android:text="@string/view_now"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvViewNowContent"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ctlViewNow" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
